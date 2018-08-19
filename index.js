@@ -16,9 +16,6 @@ function deleteFromObjectByKey(object, key) {
 }
 
 function destructivelyDeleteFromObjectByKey(object, key) {
-  
+  delete recipes[key];
+  return recipes;
 }
-
-  1) Objects destructivelyDeleteFromObjectByKey(object, key) returns object without the delete key/value pair:
-     ReferenceError: destructivelyDeleteFromObjectByKey is not defined
-      at Context.<anonymous> (test/index-test.js:62:20)
