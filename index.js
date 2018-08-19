@@ -10,9 +10,8 @@ function destructivelyUpdateObjectWithKeyAndValue(object, key, value) {
 }
 
 function deleteFromObjectByKey(object, key) {
-  
+  var newRecipes = Object.assign({}, object);
+  delete newRecipes[key];
+  return newRecipes;
 }
 
-  1) Objects deleteFromObjectByKey(object, key) deletes `key` from a clone of object and returns the new object (it is non-destructive):
-     ReferenceError: deleteFromObjectByKey is not defined
-      at Context.<anonymous> (test/index-test.js:46:20)
